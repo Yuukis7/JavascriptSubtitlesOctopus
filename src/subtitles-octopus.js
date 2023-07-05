@@ -474,11 +474,11 @@ var SubtitlesOctopus = function (options) {
 
 
         if (
-          self.canvas.width != width ||
-          self.canvas.height != height ||
-          self.canvas.style.top != top ||
-          self.canvas.style.left != left
-        ) {
+            self.canvas.width != Math.floor(width) ||
+            self.canvas.height != Math.floor(height) ||
+            self.canvas.style.top != top + 'px' ||
+            self.canvas.style.left != left + 'px'
+        } {
             self.canvas.width = width;
             self.canvas.height = height;
 
